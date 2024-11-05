@@ -1,0 +1,32 @@
+body {
+    background-color: #f0f4f8; /* Light background for contrast */
+  }
+  
+  .banner-section {
+    background: linear-gradient(to right, #007bff, #00bfff);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .banner-title {
+    font-size: 3rem;
+  }
+  
+  .service-card {
+    background: white;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for scale and shadow */
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px) scale(1.05); /* Hover effect to lift the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .banner-title {
+      font-size: 2.5rem;
+    }
+  }
+  

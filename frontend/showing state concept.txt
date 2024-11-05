@@ -1,0 +1,63 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+const CityStateDropdown = () => {
+    const [states, setStates] = useState([]);
+    const [cities, setCities] = useState([]);
+    const [selectedState, setSelectedState] = useState('');
+    const [selectedCity, setSelectedCity] = useState('');
+
+    useEffect(() => {
+        // Fetch states from the API
+        const fetchStates = async () => {
+            try {
+                const response = await axios.get('https://api.example.com/states'); // Replace with your API
+                setStates(response.data);
+            } catch (error) {
+                console.error('Error fetching states:', error);
+            }
+        };
+
+        fetchStates();
+    }, []);
+
+    const handleStateChange = async (e) => {
+        const stateId = e.target.value;
+        setSelectedState(stateId);
+
+        // Fetch cities based on selected state
+        try {
+            const response = await axios.get(`https://api.example.com/cities?stateId=${stateId}`); // Replace with your API
+            setCities(response.data);
+        } catch (error) {
+            console.error('Error fetching cities:', error);
+        }
+    };
+
+    return (
+        <div>
+            <h1>Select City and State</h1>
+            <select onChange={handleStateChange}>
+                <option value="">Select State</option>
+                {states.map((state) => (
+                    <option key={state.id} value={state.id}>
+                        {state.name}
+                    </option>
+                ))}
+            </select>
+
+            {cities.length > 0 && (
+                <select onChange={(e) => setSelectedCity(e.target.value)}>
+                    <option value="">Select City</option>
+                    {cities.map((city) => (
+                        <option key={city.id} value={city.id}>
+                            {city.name}
+                        </option>
+                    ))}
+                </select>
+            )}
+        </div>
+    );
+};
+
+export default CityStateDropdown;

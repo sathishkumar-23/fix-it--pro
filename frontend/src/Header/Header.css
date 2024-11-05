@@ -1,0 +1,51 @@
+/* Navbar styles */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway';
+}
+
+.navbar-bg {
+    background-color: #001514 !important;
+}
+
+.nav-link {
+  color: #f5e960 !important;
+  font-size: 20px;
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.nav-link:hover {
+  color: #c96480 !important;
+}
+
+/* Button styles */
+.btn-warning {
+  background-color: #f5e960;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #c96480;
+  color: #fff;
+}
+
+.text-light {
+  color: #f8f9fa; /* Light text color for better readability */
+}
+
+.f-family {
+  font-family: "Raleway "; 
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .fs-6 {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .navbar-bg {
+    padding: 10px 0; /* Add padding for smaller devices */
+  }
+}

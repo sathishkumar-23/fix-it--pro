@@ -1,0 +1,48 @@
+/* Footer styles */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+/* .bg-footer {
+    background-color: #001514;
+} */
+
+.footer-link-color {
+    color: #F5E960;
+    transition: color 0.3s ease; 
+}
+/* Footer.css */
+
+.bg-footer {
+    background-color: #001514; /* Dark background for the footer */
+}
+
+/*  */
+
+.footer-link-color:hover {
+    color: #007bff; /* Change color on hover */
+    transition: color 0.3s ease;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 0; /* Remove default padding */
+}
+
+ul li {
+    list-style: none; /* Remove bullets */
+}
+
+hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Light divider */
+}
+
+@media (max-width: 768px) {
+    .footer-link-color {
+        font-size: 1rem; /* Responsive font size */
+    }
+}

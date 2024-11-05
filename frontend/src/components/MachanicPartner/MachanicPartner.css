@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Arial, sans-serif; /* Use a better font for readability */
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.container {
+    max-width: 800px; /* Set a max width for better readability */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding around the container */
+}
+
+.py-2 {
+    padding: 10px 0; /* Vertical padding for the heading */
+}
+
+.banner-section {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 15px; /* Add some margin below headings */
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.alert {
+    margin-top: 10px;
+}
+
+.btn {
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Darker shade on hover */
+}
+
+.info-text {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add margin above this section */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .btn {
+        width: 100%; /* Full width buttons for better usability */
+        margin-bottom: 10px; /* Space between buttons */
+    }
+
+    .d-flex {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+    }
+
+    .info-text {
+        font-size: 0.9rem; /* Slightly smaller text on mobile */
+    }
+}
